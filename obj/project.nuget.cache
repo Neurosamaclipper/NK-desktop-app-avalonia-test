@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "dgSpecHash": "KXhJ1qabxCk=",
+  "success": true,
+  "projectFilePath": "/home/neurosamaclipper/NeuroKaraokeMusicPlayer/NeuroKaraokeAvaloniaPlayer.csproj",
+  "expectedPackageFiles": [
+    "/home/neurosamaclipper/.nuget/packages/avalonia/11.3.0/avalonia.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.angle.windows.natives/2.1.22045.20230930/avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.buildservices/0.0.31/avalonia.buildservices.0.0.31.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.controls.datagrid/11.3.0/avalonia.controls.datagrid.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.desktop/11.3.0/avalonia.desktop.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.fonts.inter/11.3.0/avalonia.fonts.inter.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.freedesktop/11.3.0/avalonia.freedesktop.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.native/11.3.0/avalonia.native.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.remote.protocol/11.3.0/avalonia.remote.protocol.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.skia/11.3.0/avalonia.skia.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.win32/11.3.0/avalonia.win32.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.x11/11.3.0/avalonia.x11.11.3.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.behaviors/11.3.0.6/avalonia.xaml.behaviors.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions/11.3.0.6/avalonia.xaml.interactions.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions.custom/11.3.0.6/avalonia.xaml.interactions.custom.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions.draganddrop/11.3.0.6/avalonia.xaml.interactions.draganddrop.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions.draggable/11.3.0.6/avalonia.xaml.interactions.draggable.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions.events/11.3.0.6/avalonia.xaml.interactions.events.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactions.responsive/11.3.0.6/avalonia.xaml.interactions.responsive.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/avalonia.xaml.interactivity/11.3.0.6/avalonia.xaml.interactivity.11.3.0.6.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/communitytoolkit.mvvm/8.3.2/communitytoolkit.mvvm.8.3.2.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/harfbuzzsharp/7.3.0.3/harfbuzzsharp.7.3.0.3.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/harfbuzzsharp.nativeassets.linux/7.3.0.3/harfbuzzsharp.nativeassets.linux.7.3.0.3.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/harfbuzzsharp.nativeassets.macos/7.3.0.3/harfbuzzsharp.nativeassets.macos.7.3.0.3.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/harfbuzzsharp.nativeassets.webassembly/7.3.0.3/harfbuzzsharp.nativeassets.webassembly.7.3.0.3.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/harfbuzzsharp.nativeassets.win32/7.3.0.3/harfbuzzsharp.nativeassets.win32.7.3.0.3.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/skiasharp/2.88.9/skiasharp.2.88.9.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/skiasharp.nativeassets.linux/2.88.9/skiasharp.nativeassets.linux.2.88.9.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/skiasharp.nativeassets.macos/2.88.9/skiasharp.nativeassets.macos.2.88.9.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/skiasharp.nativeassets.webassembly/2.88.9/skiasharp.nativeassets.webassembly.2.88.9.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/skiasharp.nativeassets.win32/2.88.9/skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
+    "/home/neurosamaclipper/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Tmds.DBus.Protocol' 0.21.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-xrw6-gwf8-vvr9",
+      "projectPath": "/home/neurosamaclipper/NeuroKaraokeMusicPlayer/NeuroKaraokeAvaloniaPlayer.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/neurosamaclipper/NeuroKaraokeMusicPlayer/NeuroKaraokeAvaloniaPlayer.csproj",
+      "libraryId": "Tmds.DBus.Protocol",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

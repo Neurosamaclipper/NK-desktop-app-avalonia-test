@@ -1,0 +1,66 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:NeuroKaraokeAvaloniaPlayer.ViewModels"
+             xmlns:models="clr-namespace:NeuroKaraokeAvaloniaPlayer.Models"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="NeuroKaraokeAvaloniaPlayer.Views.RadioView">
+    <UserControl.DataContext>
+        <viewModels:RadioViewModel/>
+    </UserControl.DataContext>
+
+    <DockPanel Margin="20">
+        
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 20">
+            <TextBlock Text="NeuroKaraoke Radio"
+                       FontSize="24"
+                       FontWeight="Bold"/>
+            <Button Content="Refresh"
+                    Width="80"
+                    Margin="20 0 0 0"
+                    Command="{Binding RefreshCommand}"/>
+        </StackPanel>
+
+        
+        <StackPanel>
+            
+            <TextBlock Text="{Binding ErrorMessage}"
+                       Foreground="Red"
+                       Margin="0 0 0 10"
+                       IsVisible="{Binding ErrorMessage, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"/>
+
+            
+            <TextBlock Text="Loading..."
+                       Margin="0 0 0 10"
+                       IsVisible="{Binding IsLoading}"/>
+
+            
+            <TextBlock Text="Now Playing"
+                       FontWeight="Bold"
+                       Margin="0 0 0 10"/>
+
+            <DataGrid ItemsSource="{Binding RecentSongs}"
+                      AutoGenerateColumns="False"
+                      CanUserReorderColumns="True"
+                      CanUserResizeColumns="True"
+                      CanUserSortColumns="True"
+                      SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title"
+                                        Binding="{Binding Title}"
+                                        Width="2*"/>
+                    <DataGridTextColumn Header="Artist"
+                                        Binding="{Binding OriginalArtists, Converter={StaticResource ArtistsToStringConverter}}"
+                                        Width="2*"/>
+                    <DataGridTextColumn Header="Plays"
+                                        Binding="{Binding PlayCount}"
+                                        Width="*"/>
+                    <DataGridTextColumn Header="Duration"
+                                        Binding="{Binding Duration, Converter={StaticResource DurationToStringConverter}}"
+                                        Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

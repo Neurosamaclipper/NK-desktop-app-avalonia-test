@@ -1,0 +1,71 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:NeuroKaraokeAvaloniaPlayer.ViewModels"
+             xmlns:models="clr-namespace:NeuroKaraokeAvaloniaPlayer.Models"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             x:Class="NeuroKaraokeAvaloniaPlayer.Views.SearchView">
+    <UserControl.DataContext>
+        <viewModels:SearchViewModel/>
+    </UserControl.DataContext>
+
+    <DockPanel Margin="20">
+        
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="10" Margin="0 0 0 20">
+            <TextBox Width="300"
+                     Watermark="Search for songs..."
+                     Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
+                     KeyDown="OnSearchKeyDown"/>
+            <Button Content="Search"
+                    Width="80"
+                    Command="{Binding SearchCommand}"
+                    IsEnabled="{Binding IsSearchEnabled}"/>
+        </StackPanel>
+
+        
+        <DataGrid ItemsSource="{Binding SearchResults}"
+                  AutoGenerateColumns="False"
+                  CanUserReorderColumns="True"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="True"
+                  SelectionMode="Single"
+                  DoubleTapped="OnResultDoubleTapped">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title"
+                                    Binding="{Binding Title}"
+                                    Width="2*"/>
+                <DataGridTextColumn Header="Artist"
+                                    Binding="{Binding OriginalArtists, Converter={StaticResource ArtistsToStringConverter}}"
+                                    Width="2*"/>
+                <DataGridTextColumn Header="Plays"
+                                    Binding="{Binding PlayCount}"
+                                    Width="*"/>
+                <DataGridTextColumn Header="Duration"
+                                    Binding="{Binding Duration, Converter={StaticResource DurationToStringConverter}}"
+                                    Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+        <Border DockPanel.Dock="Bottom"
+                Height="60"
+                Margin="0 20 0 0"
+                Padding="10"
+                Background="{DynamicResource ThemeAccentBrush}"
+                CornerRadius="4">
+            <StackPanel Orientation="Horizontal" Spacing="15" VerticalAlignment="Center">
+                <TextBlock Text="Now Playing:"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding NowPlayingDisplay}"
+                           VerticalAlignment="Center"/>
+                <Button Content="Play"
+                        Width="60"
+                        Command="{Binding PlayNowPlayingCommand}"
+                        IsEnabled="{Binding CanPlayNowPlaying}"
+                        HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</UserControl>
