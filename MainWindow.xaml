@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:NeuroKaraokeAvaloniaPlayer.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="NeuroKaraokeAvaloniaPlayer.MainWindow"
+        Title="NeuroKaraoke Music Player"
+        Width="1000"
+        Height="700">
+    <Window.DataContext>
+        <viewModels:MainViewModel/>
+    </Window.DataContext>
+
+    <DockPanel>
+        
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="Search" IsChecked="{Binding ShowSearchView}"/>
+                <MenuItem Header="Playlists" IsChecked="{Binding ShowPlaylistView}"/>
+                <MenuItem Header="Radio" IsChecked="{Binding ShowRadioView}"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Command="{Binding AboutCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        
+        <TabControl DockPanel.Dock="Bottom">
+            <TabItem Header="Search">
+                <ContentControl Content="{Binding SearchViewModel}"/>
+            </TabItem>
+            <TabItem Header="Playlists">
+                <ContentControl Content="{Binding PlaylistViewModel}"/>
+            </TabItem>
+            <TabItem Header="Radio">
+                <ContentControl Content="{Binding RadioViewModel}"/>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

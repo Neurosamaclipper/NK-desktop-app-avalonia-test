@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.3.0.6" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="App.xaml" />
+    <AvaloniaResource Include="MainWindow.xaml" />
+    <AvaloniaResource Include="Views/PlaylistView.xaml" />
+    <AvaloniaResource Include="Views/RadioView.xaml" />
+    <AvaloniaResource Include="Views/SearchView.xaml" />
+  </ItemGroup>
+
+</Project>
